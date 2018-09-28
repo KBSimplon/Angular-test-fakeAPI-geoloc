@@ -5,6 +5,7 @@
     <div class="card-body">
         <li><strong>Libelle: </strong>{{ shop$.Libelle }}</li>
         <li><strong>Adresse: </strong>{{ shop$.Adresse1 }}</li>
+        <li *ngIf="shop$.Adresse2"><strong>Complement: </strong>{{ shop$.Adresse2 }}</li>
         <li><strong>Code Postal: </strong>{{ shop$.CP_Ville }}</li>
         <li><strong>Telephone: </strong>{{ shop$.Telephone }}</li>
         <li><strong>Latitude: </strong>{{ shop$.lat }}</li>

@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 
       this.http.get('http://localhost:3000/shops').subscribe((data: any) => {
         data.forEach(shop => {
-          L.marker([shop.lat, shop.lng], {icon: myIcon}).bindPopup("<strong>" + shop.Nom + "</strong>" + "<br><em>Adresse: </em>" + shop.Adresse1 + ", " + shop.CP_Ville + ",<br><em>Telephone: </em>" + shop.Telephone + ',<br><a href="' + shop.extra + '"><strong>Site web</strong></a>' ).addTo(map);
+          L.marker([shop.lat, shop.lng], {icon: myIcon}).bindPopup("<strong>" + shop.Nom + "</strong>" + "<br><em>Adresse: </em>" + shop.Adresse1 + ", " + shop.CP_Ville + ",<br><em>Telephone: </em>" + shop.Telephone + ',<br><a href="' + shop.extra + '"><strong>Site web</strong></a>' + ',<br><a href="http://localhost:4200/detail/' + shop.id + '"><strong>Details</strong></a>' ).addTo(map);
         });
       });
       
