@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+## Install dependencies
+
+Please don't forget to do a `npm install`.
+
+## Data server
+
+Run `json-server --watch db.json` for a data server. Navigate to `http://localhost:3000/shops`. The app will show you the fake API datas (db.json file at the root of the project).
+
+For more information see : [json-server](https://github.com/typicode/json-server).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

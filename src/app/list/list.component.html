@@ -2,9 +2,9 @@
 
 <ul style="list-style-type: none; margin:0;padding:0;">
   <li *ngFor="let shop of shops$">
-    <div class="card" style="width: 18rem;">
+    <div class="card">
       <div class="card-body">
-        <h5 class="card-title"><a routerLink="/detail/{{shop.Nom}}">{{ shop.Nom }}</a></h5>
+        <h5 class="card-title"><a routerLink="/detail/{{shop.id}}">{{ shop.Nom }}</a></h5>
       </div>
     </div>
   </li>

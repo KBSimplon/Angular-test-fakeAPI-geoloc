@@ -1,6 +1,7 @@
 {
 "shops": [
     {
+        "id": "1",
         "Nom": "La Boucherie AIX EN PROVENCE",
         "Libelle": "AIX-EN-PROVENCE - VENELLES (13)",
         "Adresse1": "104 Avenue des Logissons",
@@ -11,6 +12,7 @@
         "extra": "https://www.la-boucherie.fr/restaurants/aix-en-provence-venelles/"
     },
     {
+        "id": "2",
         "Nom": "La Boucherie ALENCON",
         "Libelle": "ALENCON (61)",
         "Adresse1": " Route de Bretagne",
@@ -21,6 +23,7 @@
         "extra": "https://www.la-boucherie.fr/restaurants/alencon-61/"
     },
     {
+        "id": "3",
         "Nom": "La Boucherie ANGERS",
         "Libelle": "ANGERS - SAINT-BARTHELEMY-D'ANJOU (49)",
         "Adresse1": " Z.I. la Romanerie Nord",
@@ -32,6 +35,7 @@
         "extra": "https://www.la-boucherie.fr/restaurants/angers-st-barthelemy-da-49/"
     },
     {
+        "id": "4",
         "Nom": "La Boucherie ANGERS",
         "Libelle": "ANGERS CENTRE VILLE (49)",
         "Adresse1": "48A Boulevard du Maréchal Foch",
@@ -42,6 +46,7 @@
         "extra": "https://www.la-boucherie.fr/restaurants/angers-centre-ville-49/"
     },
     {
+        "id": "5",
         "Nom": "La Boucherie ANGOULÊME",
         "Libelle": "ANGOULÊME - CHAMPNIERS (16)",
         "Adresse1": " Les Grandes Chaumes",
