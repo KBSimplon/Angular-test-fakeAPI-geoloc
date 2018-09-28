@@ -11,4 +11,8 @@ export class DataService {
   getList() {
     return this.http.get('http://localhost:3000/shops')
   }
+
+  getDetail(shopId) {
+      return this.http.get('http://localhost:3000/shops/'+shopId)
+  }
 }
