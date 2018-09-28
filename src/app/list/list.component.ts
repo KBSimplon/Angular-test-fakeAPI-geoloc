@@ -12,12 +12,14 @@ import { Observable } from 'rxjs';
 
 export class ListComponent implements OnInit {
 
-  shops: any[];
+  shops$: Object;
 
-  constructor(private dataService: DataService) { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.shops = this.dataService.shops;
+    this.data.getList().subscribe(
+      data => this.shops$ = data
+    );
   }
 
 }

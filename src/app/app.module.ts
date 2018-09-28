@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 
-//import { HttpClientModule } from '@angular/common/http';
-
-import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,11 +17,9 @@ import { DataService } from './data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //HttpClientModule
+    HttpClientModule
   ],
-  providers: [
-    DataService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

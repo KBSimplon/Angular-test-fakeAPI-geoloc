@@ -1,7 +1,7 @@
 <h1>Shops :</h1>
 
 <ul>
-  <li *ngFor="let shop of shops">
+  <li *ngFor="let shop of shops$">
     <a routerLink="/detail/{{shop.Nom}}">{{ shop.Nom }}</a>
   </li>
 </ul>
