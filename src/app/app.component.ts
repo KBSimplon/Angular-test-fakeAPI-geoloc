@@ -26,8 +26,13 @@ export class AppComponent implements OnInit {
       // L.marker([50.6311634, 3.0599573], {icon: myIcon}).bindPopup('Je suis un Marqueur').addTo(map).openPopup();
 
       this.http.get('http://localhost:3000/shops').subscribe((data: any) => {
-        data.forEach(shop => {
-          L.marker([shop.lat, shop.lng], {icon: myIcon}).bindPopup("<strong>" + shop.Nom + "</strong>" + "<br><em>Adresse: </em>" + shop.Adresse1 + ", " + shop.CP_Ville + ",<br><em>Telephone: </em>" + shop.Telephone + ',<br><a href="' + shop.extra + '"><strong>Site web</strong></a>' + ',<br><a href="http://localhost:4200/detail/' + shop.id + '"><strong>Details</strong></a>' ).addTo(map);
+        data.forEach(shop => 
+        {
+          if (shop.Adresse2) {
+            L.marker([shop.lat, shop.lng], {icon: myIcon}).bindPopup("<strong>" + shop.Nom + "</strong>" + "<br><em>Adresse: </em>" + shop.Adresse1 + ", " + shop.CP_Ville + "<br><em>Complement d'adresse: </em>" + shop.Adresse2 + "<br><em>Telephone: </em>" + shop.Telephone + '<br><a href="' + shop.extra + '"><strong>Site web</strong></a>' + '<br><a href="http://localhost:4200/detail/' + shop.id + '"><strong>Details</strong></a>' ).addTo(map);
+          } else {
+            L.marker([shop.lat, shop.lng], {icon: myIcon}).bindPopup("<strong>" + shop.Nom + "</strong>" + "<br><em>Adresse: </em>" + shop.Adresse1 + ", " + shop.CP_Ville + "<br><em>Telephone: </em>" + shop.Telephone + '<br><a href="' + shop.extra + '"><strong>Site web</strong></a>' + '<br><a href="http://localhost:4200/detail/' + shop.id + '"><strong>Details</strong></a>' ).addTo(map);
+          }
         });
       });
       
