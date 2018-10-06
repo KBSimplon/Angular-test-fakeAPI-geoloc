@@ -10,7 +10,10 @@
         <li><strong>Telephone: </strong>{{ shop$.Telephone }}</li>
         <li><strong>Latitude: </strong>{{ shop$.lat }}</li>
         <li><strong>Longitude: </strong>{{ shop$.lng }}</li>
-        <li><strong>Extra: </strong>{{ shop$.extra }}</li>
+        <!--<li><strong>Site Web: </strong><a{{ shop$.extra }}</li>-->
+        <a href="{{ shop$.extra }}" target="_blank">Site Web</a>
     </div>
   </div>
 </ul>
+
+<a routerLink="/" class="btn btn-info">Retour à l'accueil</a>
