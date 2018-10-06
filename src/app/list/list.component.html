@@ -1,11 +1,13 @@
 <h1>Shops :</h1>
 
 <ul style="list-style-type: none; margin:0;padding:0;">
-  <li *ngFor="let shop of shops$">
+  <!-- Pagination réalisée avec "ngx-pagination" -->
+  <li *ngFor="let shop of shops$ | paginate: { itemsPerPage: 12, currentPage: p }">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title"><a routerLink="/detail/{{shop.id}}">{{ shop.Nom }}</a></h5>
       </div>
     </div>
   </li>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </ul>
