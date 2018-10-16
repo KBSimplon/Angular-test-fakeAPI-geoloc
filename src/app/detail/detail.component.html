@@ -15,4 +15,24 @@
     </div>
   </div>
 </ul>
+
 <a routerLink="/" class="btn btn-info">Retour à l'accueil</a>
+
+<nav aria-label="Page navigation">
+    <!-- Mélange mystique entre Bootstrap et Ngx, largement améliorable (on voit les items qui précèdent l'item actif mais pas ceux qui suivent), redondance du code ... -->
+    <ul class="pagination" *ngIf="shop$.id <= 5">
+      <li [ngClass]="{disabled: shop$.id === 1}" class="page-item"><a class="page-link" href="/detail/{{ shop$.id - 1 }}">Previous</a></li> 
+
+      <li [ngClass]="{active: shop$.id == item.id}" *ngFor="let item of shops$ | paginate: { itemsPerPage: 5, currentPage: 1 }" class="page-item"><a class="page-link" href="/detail/{{ item.id }}">{{ item.id }}</a></li> 
+      
+      <li [ngClass]="{disabled: shop$.id === 128}" class="page-item"><a class="page-link" href="/detail/{{ shop$.id + 1 }}">Next</a></li>
+    </ul>
+
+    <ul class="pagination" *ngIf="shop$.id > 5">
+      <li [ngClass]="{disabled: shop$.id === 1}" class="page-item"><a class="page-link" href="/detail/{{ shop$.id - 1 }}">Previous</a></li> 
+
+      <li [ngClass]="{active: shop$.id == item.id}" *ngFor="let item of shops$ | paginate: { itemsPerPage: 5, currentPage: shop$.id / 5 }" class="page-item"><a class="page-link" href="/detail/{{ item.id }}">{{ item.id }}</a></li> 
+      
+      <li [ngClass]="{disabled: shop$.id === 128}" class="page-item"><a class="page-link" href="/detail/{{ shop$.id + 1 }}">Next</a></li>
+    </ul> 
+</nav>

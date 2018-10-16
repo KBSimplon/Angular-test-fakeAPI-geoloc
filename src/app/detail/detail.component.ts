@@ -14,6 +14,7 @@ import { ActivatedRoute } from "@angular/router";
 export class DetailComponent implements OnInit {
 
   shop$: Object;
+  shops$: Object;
 
   constructor(private route: ActivatedRoute, private data: DataService) {
     this.route.params.subscribe( params => this.shop$ = params.id);
@@ -23,6 +24,9 @@ export class DetailComponent implements OnInit {
     this.data.getDetail(this.shop$).subscribe(
       data => this.shop$ = data
     );
-  }
 
+    this.data.getList().subscribe(
+      data => this.shops$ = data
+    );
+  }
 }
