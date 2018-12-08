@@ -2,7 +2,7 @@
 
 <ul style="list-style-type: none; margin:0;padding:0;">
   <!-- Pagination réalisée avec "ngx-pagination" -->
-  <li *ngFor="let shop of shops$ | paginate: { itemsPerPage: 10, currentPage: p }">
+  <li *ngFor="let shop of shops$ | paginate: { itemsPerPage: 12, currentPage: p }">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title"><a routerLink="/detail/{{shop.id}}">{{ shop.Nom }}</a></h5>
